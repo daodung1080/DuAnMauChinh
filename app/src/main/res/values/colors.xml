@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="dungcustom2">#0399c2</color>
+    <color name="dungcustom1">#02708e</color>
+    <color name="dungcustom3">#6e32f9</color>
+    <color name="dungcustom4">#85678984</color>
+    <color name="dungcustom5">#678984</color>
+    <color name="dungcustom6">#516c68</color>
+    <color name="dungcustom7">#6c6c6c</color>
+    <color name="dungcustom8">#ffffff</color>
 </resources>

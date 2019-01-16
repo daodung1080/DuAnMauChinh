@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/mnDanhSachHoaDon"
+            android:title="Danh sách hóa đơn">
+    </item>
+    <item
+        android:id="@+id/mnTimKiemHoaDon"
+        android:title="Thông tin bán chạy"
+        ></item>
+
+</menu>

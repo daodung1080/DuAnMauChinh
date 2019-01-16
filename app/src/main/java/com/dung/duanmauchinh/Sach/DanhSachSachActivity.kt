@@ -1,9 +1,10 @@
-package com.dung.duanmauchinh
+package com.dung.duanmauchinh.Sach
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.dung.duanmauchinh.BaseActivity
+import com.dung.duanmauchinh.R
 
-class DanhSachSachActivity : AppCompatActivity() {
+class DanhSachSachActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

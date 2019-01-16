@@ -1,9 +1,10 @@
-package com.dung.duanmauchinh
+package com.dung.duanmauchinh.TheLoai
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.dung.duanmauchinh.BaseActivity
+import com.dung.duanmauchinh.R
 
-class TheLoaiSachActivity : AppCompatActivity() {
+class TheLoaiSachActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

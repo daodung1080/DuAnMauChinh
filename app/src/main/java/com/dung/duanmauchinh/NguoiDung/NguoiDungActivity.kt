@@ -5,10 +5,12 @@ import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
+import com.dung.duanmauchinh.Adapter.VPNguoiDungAdapter
 import com.dung.duanmauchinh.BaseActivity
 import com.dung.duanmauchinh.R
 import kotlinx.android.synthetic.main.activity_nguoi_dung.*
 import kotlinx.android.synthetic.main.app_bar_nguoi_dung.*
+import kotlinx.android.synthetic.main.content_nguoi_dung.*
 
 class NguoiDungActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -16,6 +18,9 @@ class NguoiDungActivity : BaseActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nguoi_dung)
         setSupportActionBar(toolbar)
+
+        var vpNguoiDungAdapter = VPNguoiDungAdapter(supportFragmentManager)
+        vpNguoiDung.adapter = vpNguoiDungAdapter
 
         val toggle = ActionBarDrawerToggle(
             this, drawer_layout, toolbar,
@@ -40,16 +45,13 @@ class NguoiDungActivity : BaseActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.navDanhSachND -> {
-                // Handle the camera action
-            }
-            R.id.navThemND -> {
-
+                vpNguoiDung.setCurrentItem(0)
             }
             R.id.navChinhSuaND -> {
-
+                vpNguoiDung.setCurrentItem(1)
             }
             R.id.navGioiThieuND -> {
-
+                vpNguoiDung.setCurrentItem(2)
             }
             R.id.navDangXuatND -> {
 

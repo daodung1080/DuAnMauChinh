@@ -42,4 +42,10 @@
     <string name="manifestUserInformation">User Information</string>
     <string name="manifestBestSeller">Best Seller</string>
     <string name="manifestInvoiceList">Invoice List</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edtHoTenMoi">Nhập Họ tên</string>
+    <string name="btnCapNhatNguoiDung">Cập nhật</string>
+    <string name="txtGioiThieu">Buy upgrade to full version - đ149.000</string>
 </resources>

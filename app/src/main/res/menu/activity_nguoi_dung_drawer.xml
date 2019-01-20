@@ -9,10 +9,6 @@
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="Danh sách người dùng"/>
         <item
-                android:id="@+id/navThemND"
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="Thêm người dùng"/>
-        <item
                 android:id="@+id/navChinhSuaND"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="Chỉnh sửa thông tin cá nhân"/>

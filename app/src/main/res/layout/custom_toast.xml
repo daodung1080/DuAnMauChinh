@@ -16,7 +16,10 @@
                     android:layout_width="22dp"
                     android:layout_height="28dp"
                     android:src="@drawable/ic_chamthan"
-                    android:layout_margin="7dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginRight="7dp"
                     android:layout_weight="2"
                     android:id="@+id/imgCustomToast"/>
             <TextView
@@ -24,7 +27,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="8"
                     android:textSize="15dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="20dp"
                     android:layout_gravity="center"
                     android:id="@+id/txtCustomToast"
                     android:text="Xin chào các bạn"

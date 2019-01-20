@@ -13,6 +13,8 @@ class DangNhapActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dang_nhap)
 
+        activityAnim()
+
         txtDangKy.setOnClickListener {
             startActivity(Intent(this@DangNhapActivity,DangKyActivity::class.java))
             activityAnim()
@@ -21,7 +23,6 @@ class DangNhapActivity : BaseActivity() {
             startActivity(Intent(this@DangNhapActivity,ManHinhChinhActivity::class.java))
             activityAnim()
         }
-        
 
     }
 }

@@ -21,7 +21,7 @@ open class BaseActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit)
     }
 
-    fun toastDone(loinhan: String,context: Context){
+    fun toastDone(loinhan: String){
         var view = layoutInflater.inflate(R.layout.custom_toast,findViewById(R.id.llCustomToast))
         var txtCustomToast: TextView = view.findViewById(R.id.txtCustomToast)
         var imgCustomToast: ImageView = view.findViewById(R.id.imgCustomToast)
@@ -30,18 +30,18 @@ open class BaseActivity : AppCompatActivity() {
         llCustomToast.setBackgroundResource(R.drawable.bg_done_toast)
         txtCustomToast.text = loinhan
 
-        var toast = Toast(context)
+        var toast = Toast(applicationContext)
         toast.duration = Toast.LENGTH_LONG
         toast.view = view
         toast.show()
     }
 
-    fun toastCancel(loinhan: String, context: Context){
+    fun toastCancel(loinhan: String){
         var view = layoutInflater.inflate(R.layout.custom_toast,findViewById(R.id.llCustomToast))
         var txtCustomToast: TextView = view.findViewById(R.id.txtCustomToast)
         txtCustomToast.text = loinhan
 
-        var toast = Toast(context)
+        var toast = Toast(applicationContext)
         toast.duration = Toast.LENGTH_LONG
         toast.view = view
         toast.show()

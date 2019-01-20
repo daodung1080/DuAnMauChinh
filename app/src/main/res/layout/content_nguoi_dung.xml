@@ -9,4 +9,9 @@
         tools:showIn="@layout/app_bar_nguoi_dung"
         tools:context=".NguoiDung.NguoiDungActivity">
 
+    <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/vpNguoiDung"></android.support.v4.view.ViewPager>
+
 </android.support.constraint.ConstraintLayout>

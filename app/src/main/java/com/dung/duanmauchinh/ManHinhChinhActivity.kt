@@ -16,6 +16,7 @@ class ManHinhChinhActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_man_hinh_chinh)
 
+        activityAnim()
         switchIntent()
 
     }

@@ -21,8 +21,8 @@ class HoaDonActivity : BaseActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
-            R.id.mnDanhSachHoaDon -> toastDone("Danh sách hóa đơn",this)
-            R.id.mnTimKiemHoaDon -> toastCancel("Danh sách bán chạy",this)
+            R.id.mnDanhSachHoaDon -> toastDone("Danh sách hóa đơn")
+            R.id.mnTimKiemHoaDon -> toastCancel("Danh sách bán chạy")
         }
         return super.onOptionsItemSelected(item)
     }

@@ -1,5 +1,6 @@
 package com.dung.duanmauchinh.Sach
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import com.dung.duanmauchinh.BaseActivity
@@ -12,6 +13,7 @@ class SachActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sach)
         testSpinner()
+        btnDanhSachSach.setOnClickListener { startActivity(Intent(this@SachActivity,DanhSachSachActivity::class.java)) }
     }
 
     fun testSpinner(){

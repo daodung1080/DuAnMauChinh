@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.dung.duanmauchinh.Adapter.CategoryAdapter
 import com.dung.duanmauchinh.BaseActivity
+import com.dung.duanmauchinh.DAO.CategoryDAO
 import com.dung.duanmauchinh.Model.Category
 import com.dung.duanmauchinh.R
-import com.dung.duanmauchinh.SQLite.Database
 import kotlinx.android.synthetic.main.activity_danh_sach_the_loai.*
 
 class DanhSachTheLoaiActivity : BaseActivity() {
@@ -17,17 +17,18 @@ class DanhSachTheLoaiActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_danh_sach_the_loai)
 
-        var database = Database(this)
+        var categoryDAO = CategoryDAO(this)
+
         for(i in 0..10){
             var matheloai = "mã thể loại $i"
             var tentheloai = "tên thể loại $i"
             var vitri = i
             var mota = "mô tả $i"
             var category = Category(matheloai,tentheloai,vitri, mota)
-            database.insertCategory(category)
+            categoryDAO.insertCategory(category)
         }
 
-        list = database.getAllCategory()
+        list = categoryDAO.getAllCategory()
         rvTheLoai.layoutManager = LinearLayoutManager(this)
         rvTheLoai.adapter = CategoryAdapter(this,list)
 

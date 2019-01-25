@@ -35,7 +35,7 @@ class ManHinhChinhActivity : BaseActivity() {
             activityAnim()
         }
         cvHoaDon.setOnClickListener {
-            startActivity(Intent(this@ManHinhChinhActivity,HoaDonActivity::class.java))
+            startActivity(Intent(this@ManHinhChinhActivity, HoaDonActivity::class.java))
             activityAnim()
         }
         cvBanChay.setOnClickListener {

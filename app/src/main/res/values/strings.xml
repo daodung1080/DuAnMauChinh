@@ -28,7 +28,7 @@
     <string name="btnThemHoaDon">Thêm hóa đơn</string>
     <string name="btnChonNgayHoaDon">Chọn ngày</string>
     <string name="edtMaHoaDon">Nhập mã hóa đơn</string>
-    <string name="edtNgayMua">dd-MM-yyyy</string>
+    <string name="edtNgayMua">yyyy-MM-dd</string>
     <string name="edtMaSachHoaDon">Nhập mã sách</string>
     <string name="edtSoLuongMua">Số lượng mua</string>
     <string name="manifestLogin">Login</string>
@@ -48,4 +48,9 @@
     <string name="edtHoTenMoi">Nhập Họ tên</string>
     <string name="btnCapNhatNguoiDung">Cập nhật</string>
     <string name="txtGioiThieu">Buy upgrade to full version - đ149.000</string>
+    <string name="title_activity_hoa_don">HoaDonActivity</string>
+    <string name="title_home">Hóa đơn</string>
+    <string name="title_dashboard">Hóa đơn chi tiết</string>
+    <string name="title_notifications">Danh sách</string>
+    <string name="btnThemHDCT">Thêm hóa đơn chi tiết</string>
 </resources>

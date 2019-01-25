@@ -6,10 +6,11 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.dung.duanmauchinh.Adapter.UserAdapter
+import com.dung.duanmauchinh.DAO.UserDAO
 import com.dung.duanmauchinh.Model.User
 import com.dung.duanmauchinh.R
-import com.dung.duanmauchinh.SQLite.Database
 import kotlinx.android.synthetic.main.fragment_danh_sach_nguoi_dung.view.*
 
 class DanhSachNguoiDungFragment : Fragment() {
@@ -18,24 +19,33 @@ class DanhSachNguoiDungFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val rootview: View = inflater.inflate(R.layout.fragment_danh_sach_nguoi_dung,container,false)
-
+        var rootview = inflater.inflate(R.layout.fragment_danh_sach_nguoi_dung, container, false)
         var rvNguoiDung = rootview.rvNguoiDung
-        var database = Database(context)
-        for(i in 0..10){
-            var username = "username $i"
-            var password = "password $i"
-            var phone = "phone $i"
-            var fullname = "fullname $i"
-            var user = User(username, password, phone, fullname)
-            database.insertUser(user)
-        }
-        list = database.getAllUser()
 
+        var userDAO = UserDAO(context)
+
+        for (i in 0..5){
+            var username = "username$i"
+            var password = "password$i"
+            var phone = "phone$i"
+            var fullname = "fullname$i"
+            var user = User(username, password, phone, fullname)
+            userDAO.insertUser(user)
+        }
+
+        list = userDAO.getAllUser()
+        var adapter = UserAdapter(context,this,list)
         rvNguoiDung.layoutManager = LinearLayoutManager(context)
-        rvNguoiDung.adapter = UserAdapter(context, list)
+        rvNguoiDung.adapter = adapter
 
         return rootview
+    }
+
+    fun removeUser(username :String){
+        var userDAO = UserDAO(context)
+        userDAO.deleteUser(username)
+        list = userDAO.getAllUser()
+        Toast.makeText(context,"Xóa người dùng $username thành công", Toast.LENGTH_LONG).show()
     }
 
 }

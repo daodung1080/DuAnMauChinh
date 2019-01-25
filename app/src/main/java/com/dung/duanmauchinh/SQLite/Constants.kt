@@ -6,6 +6,8 @@ open class Constants {
     var user_table = "nguoidung"
     var category_table = "theloai"
     var book_table = "sach"
+    var invoice_table = "hoadon"
+    var invoice_detail_table = "hoadonchitiet"
     // Tên các cột
     //user
     var user_username = "username"
@@ -25,11 +27,34 @@ open class Constants {
     var book_price = "giabia"
     var book_amount = "soluong"
     var book_foreign_key = "foreign key($book_idcategory) references $category_table($category_idcategory)"
+    //Hóa đơn
+    var invoice_id = "mahoadon"
+    var invoice_date = "ngaymua"
+
+    //Hóa đơn chi tiết
+    var invoice_detail_id = "mahoadonct"
+    var invoice_detail_invoiceid = "mahoadon"
+    var invoice_detail_idbook = "masach"
+    var invoice_detail_buyamount = "soluongmua"
+    var invoice_detail_foreign_key1 = "foreign key($invoice_detail_invoiceid) references $invoice_table($invoice_id)"
+    var invoice_detail_foreign_key2 = "foreign key($invoice_detail_idbook) references $book_table($book_idbook)"
 
     // Tạo bảng
     var create_table_user = "create table $user_table($user_username nvarchar, $user_password nvarchar, $user_phone nvarchar, $user_fullname nvarchar)"
+
     var create_table_category = "create table $category_table($category_idcategory nvarchar not null primary key, $category_categoryname nvarchar, $category_position integer, $category_describe nvarchar)"
+
     var create_table_book = "create table $book_table(" +
             "$book_idbook nvarchar not null primary key, $book_idcategory nvarchar not null, $book_bookname nvarchar," +
             "$book_author nvarchar, $book_price integer, $book_amount integer, $book_foreign_key)"
+
+    var create_table_invoice = "create table $invoice_table(" +
+            "$invoice_id integer not null primary key, " +
+            "$invoice_date date)"
+
+    var create_table_invoice_detail = "create table $invoice_detail_table(" +
+            "$invoice_detail_id integer primary key autoincrement, " +
+            "$invoice_detail_invoiceid nvarchar not null," +
+            "$invoice_detail_idbook nvarchar not null," +
+            "$invoice_detail_buyamount integer, $invoice_detail_foreign_key1, $invoice_detail_foreign_key2)"
 }

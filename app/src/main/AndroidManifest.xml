@@ -18,36 +18,55 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".DangKyDangNhap.DangNhapActivity" android:label="@string/manifestLogin">
+        <activity
+                android:name=".DangKyDangNhap.DangNhapActivity"
+                android:label="@string/manifestLogin">
         </activity>
-        <activity android:name=".DangKyDangNhap.DangKyActivity" android:label="@string/manifestSignUp">
+        <activity
+                android:name=".DangKyDangNhap.DangKyActivity"
+                android:label="@string/manifestSignUp">
         </activity>
         <activity
                 android:name=".ManHinhChinhActivity"
-                android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-                android:label="Main Menu">
+                android:label="Main Menu"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
-        <activity android:name=".TheLoai.TheLoaiSachActivity"
+        <activity
+                android:name=".TheLoai.TheLoaiSachActivity"
                 android:label="@string/manifestBookCategory">
         </activity>
-        <activity android:name=".TheLoai.DanhSachTheLoaiActivity" android:label="@string/BookCategoryList">
+        <activity
+                android:name=".TheLoai.DanhSachTheLoaiActivity"
+                android:label="@string/BookCategoryList">
         </activity>
-        <activity android:name=".Sach.SachActivity" android:label="@string/manifestBook">
+        <activity
+                android:name=".Sach.SachActivity"
+                android:label="@string/manifestBook">
         </activity>
-        <activity android:name=".Sach.DanhSachSachActivity" android:label="@string/BookList">
+        <activity
+                android:name=".Sach.DanhSachSachActivity"
+                android:label="@string/BookList">
         </activity>
-        <activity android:name=".HoaDon.HoaDonActivity" android:label="@string/manifestInvoice">
+        <activity
+                android:name=".HoaDon.HoaDonActivity"
+                android:label="@string/manifestInvoice">
         </activity>
-        <activity android:name=".ThongKe.ThongKeActivity" android:label="@string/manifestStatistic">
+        <activity
+                android:name=".ThongKe.ThongKeActivity"
+                android:label="@string/manifestStatistic">
         </activity>
         <activity
                 android:name=".NguoiDung.NguoiDungActivity"
                 android:label="@string/manifestUserInformation"
                 android:theme="@style/DungCustom.NoActionBar">
         </activity>
-        <activity android:name=".BanChay.BanChayActivity" android:label="@string/manifestBestSeller">
+        <activity
+                android:name=".BanChay.BanChayActivity"
+                android:label="@string/manifestBestSeller">
         </activity>
-        <activity android:name=".HoaDon.DanhSachHoaDonActivity" android:label="@string/manifestInvoiceList">
+        <activity
+                android:name=".HoaDon.Fragment.FragmentDanhSachHoaDon"
+                android:label="@string/manifestInvoiceList">
         </activity>
     </application>
 

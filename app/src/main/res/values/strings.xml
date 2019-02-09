@@ -53,4 +53,24 @@
     <string name="title_dashboard">Hóa đơn chi tiết</string>
     <string name="title_notifications">Danh sách</string>
     <string name="btnThemHDCT">Thêm hóa đơn chi tiết</string>
+    <string name="edtPhoneMoi">Nhập số điện thoại</string>
+    <string name="edtTenSach">Nhập tên sách</string>
+    <string name="txtMaHoaDon">Mã hóa đơn:</string>
+    <string name="txtNgayMua">Ngày đặt:</string>
+    <string name="txtTest">Test</string>
+    <string name="txtTestToast">Hello everybody im dao dung from kotlin android</string>
+    <string name="edtCategoryName">Nhập tên thể loại mới</string>
+    <string name="edtCategoryPosition">Nhập vị trí mới</string>
+    <string name="edtCategoryDescribe">Nhập mô tả mới</string>
+    <string name="txtCategoryID">Mã thể loại:</string>
+    <string name="txtCategoryPosition">Vị trí:</string>
+    <string name="txtCategoryName">Tên thể loại:</string>
+    <string name="txtBookName">Tên sách:</string>
+    <string name="txtBookAmount">Số lượng:</string>
+    <string name="edtEditBookAuthor">Nhập tên tác giả mới</string>
+    <string name="edtEditBookPrice">Nhập giá bìa mới</string>
+    <string name="edtEditBookAmount">Nhập số lượng sách mới</string>
+    <string name="edtEditBookName">Nhập tên sách mới</string>
+    <string name="edtPassChinhSua">Nhập mật khẩu cũ</string>
+    <string name="edtMatKhauMoi">Nhập mật khẩu mới</string>
 </resources>

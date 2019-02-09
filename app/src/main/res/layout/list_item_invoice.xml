@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:paddingTop="5dp">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="2">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:text="Mã HD:"
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:textSize="13dp"
+                    android:layout_height="fill_parent"
+                    android:text="Ngày xuất:"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="6">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/txtTest"
+                    android:textSize="13dp"
+                    android:id="@+id/txtMaHoaDonHD"
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:textSize="13dp"
+                    android:id="@+id/txtNgayMuaHD"
+                    android:layout_height="fill_parent"
+                    android:text="@string/txtTest"
+                    android:gravity="center"/>
+
+        </LinearLayout>
+        <ImageView
+                android:layout_width="@dimen/ic_width_dl_rm"
+                android:layout_height="@dimen/ic_height_dl_rm"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/img_edit"
+                android:id="@+id/imgEditHoaDon"
+                android:foregroundGravity="center"
+                android:layout_marginRight="5dp"/>
+        <ImageView
+                android:layout_width="@dimen/ic_width_dl_rm"
+                android:layout_height="@dimen/ic_height_dl_rm"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:src="@drawable/img_remove"
+                android:id="@+id/imgCloseHoaDon"/>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

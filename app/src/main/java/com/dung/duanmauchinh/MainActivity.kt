@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import com.dung.duanmauchinh.DangKyDangNhap.DangNhapActivity
+import com.dung.duanmauchinh.LoginSignin.LoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.concurrent.schedule
@@ -17,12 +17,13 @@ class MainActivity : BaseActivity() {
 
         initAnimation()
         timerSwitch()
+
     }
 
     fun timerSwitch(){
         var timer = Timer()
         timer.schedule(4100){
-            startActivity(Intent(this@MainActivity,DangNhapActivity::class.java))
+            startActivity(Intent(this@MainActivity,LoginActivity::class.java))
             this@MainActivity.finish()
         }
     }

@@ -40,16 +40,16 @@ open class Constants {
     var invoice_detail_foreign_key2 = "foreign key($invoice_detail_idbook) references $book_table($book_idbook)"
 
     // Tạo bảng
-    var create_table_user = "create table $user_table($user_username nvarchar, $user_password nvarchar, $user_phone nvarchar, $user_fullname nvarchar)"
+    var create_table_user = "create table $user_table($user_username nvarchar not null primary key, $user_password nvarchar not null, $user_phone nvarchar not null, $user_fullname nvarchar not null)"
 
-    var create_table_category = "create table $category_table($category_idcategory nvarchar not null primary key, $category_categoryname nvarchar, $category_position integer, $category_describe nvarchar)"
+    var create_table_category = "create table $category_table($category_idcategory nvarchar not null primary key, $category_categoryname nvarchar not null, $category_position integer, $category_describe nvarchar)"
 
     var create_table_book = "create table $book_table(" +
-            "$book_idbook nvarchar not null primary key, $book_idcategory nvarchar not null, $book_bookname nvarchar," +
-            "$book_author nvarchar, $book_price integer, $book_amount integer, $book_foreign_key)"
+            "$book_idbook nvarchar not null primary key, $book_idcategory nvarchar not null, $book_bookname nvarchar not null," +
+            "$book_author nvarchar not null, $book_price integer, $book_amount integer, $book_foreign_key)"
 
     var create_table_invoice = "create table $invoice_table(" +
-            "$invoice_id integer not null primary key, " +
+            "$invoice_id nvarchar not null primary key, " +
             "$invoice_date date)"
 
     var create_table_invoice_detail = "create table $invoice_detail_table(" +

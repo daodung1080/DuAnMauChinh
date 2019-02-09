@@ -19,54 +19,50 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".DangKyDangNhap.DangNhapActivity"
+                android:name=".LoginSignin.LoginActivity"
                 android:label="@string/manifestLogin">
         </activity>
         <activity
-                android:name=".DangKyDangNhap.DangKyActivity"
+                android:name=".LoginSignin.SigninActivity"
                 android:label="@string/manifestSignUp">
         </activity>
         <activity
-                android:name=".ManHinhChinhActivity"
+                android:name=".MainScreenActivity"
                 android:label="Main Menu"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         </activity>
         <activity
-                android:name=".TheLoai.TheLoaiSachActivity"
+                android:name=".Category.CategoryActivity"
                 android:label="@string/manifestBookCategory">
         </activity>
         <activity
-                android:name=".TheLoai.DanhSachTheLoaiActivity"
+                android:name=".Category.CategoryListActivity"
                 android:label="@string/BookCategoryList">
         </activity>
         <activity
-                android:name=".Sach.SachActivity"
+                android:name=".Book.BookActivity"
                 android:label="@string/manifestBook">
         </activity>
         <activity
-                android:name=".Sach.DanhSachSachActivity"
+                android:name=".Book.BookListActivity"
                 android:label="@string/BookList">
         </activity>
         <activity
-                android:name=".HoaDon.HoaDonActivity"
+                android:name=".Invoice.InvoiceActivity"
                 android:label="@string/manifestInvoice">
         </activity>
         <activity
-                android:name=".ThongKe.ThongKeActivity"
+                android:name=".Statistic.StatisticActivity"
                 android:label="@string/manifestStatistic">
         </activity>
         <activity
-                android:name=".NguoiDung.NguoiDungActivity"
+                android:name=".User.UserActivity"
                 android:label="@string/manifestUserInformation"
                 android:theme="@style/DungCustom.NoActionBar">
         </activity>
         <activity
-                android:name=".BanChay.BanChayActivity"
+                android:name=".BestSale.BestSaleActivity"
                 android:label="@string/manifestBestSeller">
-        </activity>
-        <activity
-                android:name=".HoaDon.Fragment.FragmentDanhSachHoaDon"
-                android:label="@string/manifestInvoiceList">
         </activity>
     </application>
 

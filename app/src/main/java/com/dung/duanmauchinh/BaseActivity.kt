@@ -19,38 +19,37 @@ open class BaseActivity : AppCompatActivity() {
         overridePendingTransition(R.anim.anim_enter, R.anim.anim_exit)
     }
 
-    fun toastDone(loinhan: String){
-        var view = layoutInflater.inflate(R.layout.custom_toast,findViewById(R.id.llCustomToast))
-        var txtCustomToast: TextView = view.txtCustomToast
-        var imgCustomToast: ImageView = view.imgCustomToast
-        var llCustomToast: LinearLayout = view.llCustomToast
-        imgCustomToast.setImageResource(R.drawable.ic_done)
-        llCustomToast.setBackgroundResource(R.drawable.bg_done_toast)
-        txtCustomToast.text = loinhan
-
-        var toast = Toast(applicationContext)
-        toast.duration = Toast.LENGTH_LONG
-        toast.view = view
-        toast.show()
-    }
-
-    fun toastCancel(loinhan: String){
-        var view = layoutInflater.inflate(R.layout.custom_toast,findViewById(R.id.llCustomToast))
-        var txtCustomToast: TextView = view.txtCustomToast
-        txtCustomToast.text = loinhan
-
-        var toast = Toast(applicationContext)
-        toast.duration = Toast.LENGTH_LONG
-        toast.view = view
-        toast.show()
-    }
-
     fun fragmentNullException(fragment: Fragment, idLayout: Int){
         if(fragment != null){
             var fragmentManager = supportFragmentManager
             var fragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(idLayout,fragment)
             fragmentTransaction.commit()
+        }
+    }
+
+    fun showMessage(message: String, switch: Boolean){
+        var view = layoutInflater.inflate(R.layout.custom_toast,null)
+        var txtCustomToast: TextView = view.txtCustomToast
+        var imgCustomToast: ImageView = view.imgCustomToast
+        var llCustomToast: LinearLayout = view.llCustomToast
+        if(switch == true){
+            imgCustomToast.setImageResource(R.drawable.ic_check)
+            llCustomToast.setBackgroundResource(R.drawable.bg_done_toast)
+            txtCustomToast.text = message
+
+            var toast = Toast(applicationContext)
+            toast.duration = Toast.LENGTH_SHORT
+            toast.view = view
+            toast.show()
+        }
+        if(switch == false){
+            txtCustomToast.text = message
+
+            var toast = Toast(applicationContext)
+            toast.duration = Toast.LENGTH_SHORT
+            toast.view = view
+            toast.show()
         }
     }
 

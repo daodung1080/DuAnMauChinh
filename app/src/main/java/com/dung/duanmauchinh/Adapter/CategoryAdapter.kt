@@ -1,20 +1,19 @@
 package com.dung.duanmauchinh.Adapter
 
-import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.dung.duanmauchinh.Model.Category
 import com.dung.duanmauchinh.R
-import kotlinx.android.synthetic.main.list_item_the_loai_sach.view.*
+import com.dung.duanmauchinh.Category.CategoryListActivity
+import kotlinx.android.synthetic.main.list_item_category.view.*
 
-class CategoryAdapter(var context: Context, var categoryList: ArrayList<Category>): RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
+class CategoryAdapter(var context: CategoryListActivity, var categoryList: ArrayList<Category>): RecyclerView.Adapter<CategoryAdapter.CategoryHolder>() {
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CategoryHolder {
-        var view: View = LayoutInflater.from(context).inflate(R.layout.list_item_the_loai_sach,p0,false)
+        var view: View = LayoutInflater.from(context).inflate(R.layout.list_item_category,p0,false)
         return CategoryHolder(view)
     }
 
@@ -27,13 +26,18 @@ class CategoryAdapter(var context: Context, var categoryList: ArrayList<Category
         var category = categoryList.get(p1)
         holder.txtIdTheLoai.text = category.matheloai
         holder.txtTenTheLoai.text = category.tentheloai
-        holder.imgCloseTheLoai.setOnClickListener { Toast.makeText(context,"Mình là thể loại adapter",Toast.LENGTH_LONG).show() }
-
+        holder.imgCloseTheLoai.setOnClickListener {
+            context.removeCategory(category.matheloai!!,p1)
+        }
+        holder.imgEditTheLoai.setOnClickListener {
+            context.editCategory(category.matheloai!!,p1)
+        }
     }
 
     class CategoryHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var txtIdTheLoai: TextView = itemView.txtIdTheLoai
+        var txtIdTheLoai: TextView = itemView.txtIDTheLoai
         var txtTenTheLoai: TextView = itemView.txtTenTheLoai
         var imgCloseTheLoai: ImageView = itemView.imgCloseTheLoai
+        var imgEditTheLoai: ImageView = itemView.imgEditTheLoai
     }
 }

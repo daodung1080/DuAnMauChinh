@@ -117,7 +117,7 @@ class InvoiceDetailDAO(context: Context?) {
         return list
     }
 
-    fun getSaleAmount(day: String, month: String, year: String, function: Int): String {
+    fun getSaleAmount(day: String, month: String, year: String, switch: Int): String {
 
         var gia = "Không có thu nhập"
 
@@ -129,24 +129,25 @@ class InvoiceDetailDAO(context: Context?) {
         var ngaymua = Constants().invoice_date
         var masach = Constants().book_idbook
         var mahoadon = Constants().invoice_id
+
         var query = ""
 
-        when(function){
+        when(switch){
             0 -> {
-                var query = "select $sachTable.$giabia , $hoadonTable.$ngaymua, $hoadonctTable.$soluongmua " +
+                query = "select $sachTable.$giabia , $hoadonTable.$ngaymua, $hoadonctTable.$soluongmua " +
                         "from $sachTable join $hoadonctTable on $sachTable.$masach = $hoadonctTable.$masach " +
                         "join $hoadonTable on $hoadonctTable.$mahoadon = $hoadonTable.$mahoadon " +
                         "where strftime('%d',$hoadonTable.$ngaymua) = '$day' and strftime('%m',$hoadonTable.$ngaymua) = '$month' and " +
                         "strftime('%Y',$hoadonTable.$ngaymua) = '$year' "
             }
             1 -> {
-                var query = "select $sachTable.$giabia , $hoadonTable.$ngaymua, $hoadonctTable.$soluongmua " +
+                query = "select $sachTable.$giabia , $hoadonTable.$ngaymua, $hoadonctTable.$soluongmua " +
                         "from $sachTable join $hoadonctTable on $sachTable.$masach = $hoadonctTable.$masach " +
                         "join $hoadonTable on $hoadonctTable.$mahoadon = $hoadonTable.$mahoadon " +
                         "where strftime('%m',$hoadonTable.$ngaymua) = '$month' and strftime('%Y',$hoadonTable.$ngaymua) = '$year'"
             }
             2 -> {
-                var query = "select $sachTable.$giabia , $hoadonTable.$ngaymua, $hoadonctTable.$soluongmua " +
+                query = "select $sachTable.$giabia , $hoadonTable.$ngaymua, $hoadonctTable.$soluongmua " +
                         "from $sachTable join $hoadonctTable on $sachTable.$masach = $hoadonctTable.$masach " +
                         "join $hoadonTable on $hoadonctTable.$mahoadon = $hoadonTable.$mahoadon " +
                         "where strftime('%Y',$hoadonTable.$ngaymua) = '$year' "

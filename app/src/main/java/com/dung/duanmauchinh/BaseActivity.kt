@@ -21,10 +21,7 @@ open class BaseActivity : AppCompatActivity() {
 
     fun fragmentNullException(fragment: Fragment, idLayout: Int){
         if(fragment != null){
-            var fragmentManager = supportFragmentManager
-            var fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(idLayout,fragment)
-            fragmentTransaction.commit()
+            supportFragmentManager.beginTransaction().replace(idLayout,fragment).commit()
         }
     }
 

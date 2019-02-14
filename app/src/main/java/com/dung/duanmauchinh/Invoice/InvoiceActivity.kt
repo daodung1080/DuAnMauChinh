@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import com.dung.duanmauchinh.BaseActivity
-import com.dung.duanmauchinh.Invoice.Fragment.FragmentInvoiceList
-import com.dung.duanmauchinh.Invoice.Fragment.FragmentInvoiceDetail
 import com.dung.duanmauchinh.Invoice.Fragment.FragmentInvoiceAddition
+import com.dung.duanmauchinh.Invoice.Fragment.FragmentInvoiceDetail
+import com.dung.duanmauchinh.Invoice.Fragment.FragmentInvoiceList
 import com.dung.duanmauchinh.R
 import kotlinx.android.synthetic.main.activity_invoice.*
 
@@ -26,15 +26,14 @@ class InvoiceActivity : BaseActivity() {
             }
         }
         this.fragmentNullException(fragment!! , R.id.flHoaDon)
-        false
+        true
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_invoice)
 
-        var fragment = FragmentInvoiceList()
-        fragmentNullException(fragment!! , R.id.flHoaDon)
+        fragmentNullException(FragmentInvoiceAddition() , R.id.flHoaDon)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
